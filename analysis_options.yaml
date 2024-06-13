@@ -1,0 +1,19 @@
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    no_self_assignments: true
+    no_wildcard_variable_uses: true
+    parameter_assignments: true
+    prefer_null_aware_method_calls: true
+    prefer_final_in_for_each: true
+    unnecessary_await_in_return: true
+    unnecessary_breaks: true
+
+# https://dart.dev/guides/language/analysis-options
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true

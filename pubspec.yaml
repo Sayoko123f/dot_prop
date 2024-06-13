@@ -1,0 +1,14 @@
+name: dot_prop
+description: Get, set, or delete a property from a nested object using a dot path.
+version: 1.0.0
+repository: https://github.com/Sayoko123f/dot_prop
+
+environment:
+  sdk: ^3.4.0
+
+dependencies:
+  characters: ^1.3.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
