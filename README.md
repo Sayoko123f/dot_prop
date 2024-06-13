@@ -1,3 +1,5 @@
+[![pub package](https://img.shields.io/pub/v/dot_prop.svg)](https://pub.dev/packages/dot_prop)
+
 Get, set, or delete a property from a nested object using a dot path.
 
 This is the Dart implementation of [dot-prop](https://www.npmjs.com/package/dot-prop).

@@ -140,7 +140,7 @@ List<dynamic> _getPathSegments(String path) {
 }
 
 /// Get the value of the property at the given path.
-/// 
+///
 /// If not found, return [fallbackValue] if provided, otherwise return `null`.
 dynamic getProperty(dynamic object, String path, [dynamic fallbackValue]) {
   if (!_isObject(object)) {
@@ -186,9 +186,9 @@ dynamic getProperty(dynamic object, String path, [dynamic fallbackValue]) {
 }
 
 /// Set the property at the given path to the given value.
-/// 
+///
 /// If location of path doesn't exist, it will created.
-/// 
+///
 /// Returns the object.
 dynamic setProperty(dynamic object, String path, dynamic value) {
   if (!_isObject(object)) {
@@ -240,7 +240,7 @@ dynamic setProperty(dynamic object, String path, dynamic value) {
 }
 
 /// Delete the property at the given path.
-/// 
+///
 /// Returns a boolean of whether the property existed before being deleted.
 bool deleteProperty(dynamic object, String path) {
   if (!_isObject(object)) {
@@ -408,7 +408,7 @@ Iterable<String> _deepKeysIterator(dynamic object,
 }
 
 /// Returns an array of every path.
-/// 
+///
 /// Non-empty plain objects and arrays are deeply recursed and are not themselves included.
 List<String> deepKeys(dynamic object) {
   return [..._deepKeysIterator(object)];
