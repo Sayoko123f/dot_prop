@@ -206,8 +206,12 @@ dynamic setProperty(dynamic object, String path, dynamic value) {
 
     if (index == pathArray.length - 1) {
       if (currentObject is List && key is int) {
-        _fillListByNull(currentObject, key);
-        currentObject.add(value);
+        if (key >= currentObject.length) {
+          _fillListByNull(currentObject, key);
+          currentObject.add(value);
+        } else {
+          currentObject[key] = value;
+        }
       } else {
         currentObject[key] = value;
       }

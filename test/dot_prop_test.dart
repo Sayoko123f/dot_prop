@@ -392,6 +392,29 @@ void main() {
       // t.deepEqual(fixture7, {foo: ['bar']});
     });
 
+    test('array get/set test', () {
+      Map<String, dynamic> fixture1 = {
+        'foo': <dynamic>[],
+      };
+      final foo = fixture1['foo'] as List<dynamic>;
+      setProperty(fixture1, 'foo[0]', 'bar');
+      expect(foo.length, 1);
+      expect(foo.first, 'bar');
+      expect(getProperty(fixture1, 'foo[0]'), 'bar');
+
+      setProperty(fixture1, 'foo[0]', 'baz');
+      expect(foo.length, 1);
+      expect(foo.first, 'baz');
+      expect(getProperty(fixture1, 'foo[0]'), 'baz');
+
+      setProperty(fixture1, 'foo[1]', 1);
+      expect(foo.length, 2);
+      expect(foo.first, 'baz');
+      expect(foo.last, 1);
+      expect(getProperty(fixture1, 'foo[0]'), 'baz');
+      expect(getProperty(fixture1, 'foo[1]'), 1);
+    });
+
     test('deleteProperty', () {
       final inner = <String, dynamic>{
         'a': 'a',
